@@ -1,13 +1,11 @@
-
 node
 {
-  stage('scm')
-   {  
-      git 'https://github.com/komuravellyshivakumardevops/openmrs-core.git'
-   }
-  stage('artifact creation')
-   {
-      sh 'mvn package'
-   }
+stage('scm')
+  {
+    git branch: 'feature1', url: 'https://github.com/komuravellyshivakumardevops/openmrs-core.git'
+  }
+stage('junit test results')
+  {
+     junit '/surefire-reports/*.xml'
+  }
 }
-      

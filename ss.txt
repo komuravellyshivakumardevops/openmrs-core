@@ -1,0 +1,19 @@
+
+
+
+upstream job
+
+downstream
+
+
+joba(upstream job) 
+  artifacts
+  jar/war
+jobb(down stream job)
+  deployment
+  ansible,docker
+
+
+day builds
+
+night builds
